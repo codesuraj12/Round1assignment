@@ -14,21 +14,26 @@ export default function FloatingCard({
   };
 
   return (
+    <div className={`absolute   ${className}`}>
+      <div className={` ${rotation}`}>
     <div
       className={`
-        absolute
+       
         flex items-center gap-2
         px-10 py-4
         rounded-full
         shadow-2xl
         backdrop-blur-md
+        animate-float
         ${colorClasses[color]}
-        ${rotation}
-        ${className}
+       
+     
       `}
     >
       {icon}
       <span className="font-medium">{label}</span>
+    </div>
+    </div>
     </div>
   );
 }
